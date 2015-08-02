@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D18B7C1C-3385-4078-9664-5D0B09E8CE1C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Catering_management</RootNamespace>
+    <AssemblyName>Catering_management</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BillBLL.cs" />
+    <Compile Include="BLL\BookBLL.cs" />
+    <Compile Include="BLL\EmployeeBLL.cs" />
+    <Compile Include="DAL\BillDAL.cs" />
+    <Compile Include="DAL\BookDAL.cs" />
+    <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="MODEL\BillInfo.cs" />
+    <Compile Include="MODEL\BindComboBox.cs" />
+    <Compile Include="BLL\BkpAndResBLL.cs" />
+    <Compile Include="BLL\CommonHelper.cs" />
+    <Compile Include="BLL\MemberBLL.cs" />
+    <Compile Include="BLL\MenuBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="BLL\UserFunBLL.cs" />
+    <Compile Include="DAL\BkpAndResDAL.cs" />
+    <Compile Include="DAL\DataTDable.cs" />
+    <Compile Include="DAL\DBHelper.cs" />
+    <Compile Include="DAL\MemberDAL.cs" />
+    <Compile Include="DAL\MenuDAL.cs" />
+    <Compile Include="BLL\StockBLL.cs" />
+    <Compile Include="DAL\StockDAL.cs" />
+    <Compile Include="DAL\UserFunctionDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="MODEL\BookInfo.cs" />
+    <Compile Include="MODEL\EmployeeInfo.cs" />
+    <Compile Include="MODEL\Goods.cs" />
+    <Compile Include="MODEL\MDiscount.cs" />
+    <Compile Include="MODEL\MemberInfo.cs" />
+    <Compile Include="MODEL\MenuInfo.cs" />
+    <Compile Include="MODEL\SysUser.cs" />
+    <Compile Include="MODEL\Table.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CheckBill.Designer.cs">
+      <DependentUpon>CheckBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Book.Designer.cs">
+      <DependentUpon>Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CheckBook.Designer.cs">
+      <DependentUpon>CheckBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Salary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Salary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stock1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Turnover1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Turnover.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Member.Designer.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Now.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Now.Designer.cs">
+      <DependentUpon>Now.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangePWD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangePWD.Designer.cs">
+      <DependentUpon>ChangePWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Turnover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Turnover.Designer.cs">
+      <DependentUpon>Turnover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManageUser.Designer.cs">
+      <DependentUpon>ManageUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckBill.resx">
+      <DependentUpon>CheckBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Book.resx">
+      <DependentUpon>Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckBook.resx">
+      <DependentUpon>CheckBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Member.resx">
+      <DependentUpon>Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Now.resx">
+      <DependentUpon>Now.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChangePWD.resx">
+      <DependentUpon>ChangePWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Salary.rdlc" />
+    <EmbeddedResource Include="UI\Stock.rdlc" />
+    <EmbeddedResource Include="UI\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Turnover.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Turnover.resx">
+      <DependentUpon>Turnover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageUser.resx">
+      <DependentUpon>ManageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Salary.xsc">
+      <DependentUpon>Salary.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Salary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Salary.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Salary.xss">
+      <DependentUpon>Salary.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Stock.xsc">
+      <DependentUpon>Stock.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Stock.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Stock.xss">
+      <DependentUpon>Stock.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Turnover.xsc">
+      <DependentUpon>Turnover.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Turnover.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Turnover1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Turnover.xss">
+      <DependentUpon>Turnover.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Resources\eclipse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\ark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\artscontrol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\internet-telephony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\accessories-dictionary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\xcalk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\codeblocks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\viking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\Vista01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\Kuanping06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\Kuanping061.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\evolution-memos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\d8f9d72a6059252dbfdfceac349b033b5ab5b94a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Resources\351345.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
