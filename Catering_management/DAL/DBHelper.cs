@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Catering_management.DAL
 {
     public class DBHelper
     {
-        static string connStr = @"Data Source=(local); Initial Catalog=Catering ; User ID=sa; Password=123456";
+        static string connStr = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString.ToString();
         static SqlConnection conn = null;
 
         /// <summary>
